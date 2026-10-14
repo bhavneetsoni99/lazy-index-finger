@@ -12,7 +12,7 @@ Three small bookmarklets for Facebook and Instagram. No extension, no install, n
 
 ## Install
 
-1. Open the [install page](https://bhavneetsoni99.github.io/insta-fb-auto_next_and_save/)
+1. Open the [install page](https://bhavneetsoni99.github.io/fb_insta_auto_next_and_save/)
 2. Drag a button to your bookmarks bar
 
 ## Use
