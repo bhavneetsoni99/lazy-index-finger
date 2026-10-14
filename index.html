@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Auto-next bookmarklets for Facebook and Instagram</title>
+<style>
+  :root { --bg:#f4f5f7; --ink:#161a22; --muted:#545c6b; --line:#d5d9e0; --accent:#2457d6; --accent-ink:#fff; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#14171d; --ink:#eceff4; --muted:#a2a9b6; --line:#2d333d; --accent:#7ea2ff; --accent-ink:#0d1220; }
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:17px/1.55 Georgia,"Times New Roman",serif; }
+  main { max-width:40rem; margin:0 auto; padding:4rem 1.25rem 5rem; }
+  h1 { font-size:2.1rem; line-height:1.15; margin:0 0 1rem; letter-spacing:-.01em; }
+  p { margin:0 0 1rem; color:var(--muted); max-width:34rem; }
+  .tool { display:flex; gap:1.25rem; align-items:center; justify-content:space-between; padding:1.1rem 0; border-top:1px solid var(--line); }
+  .tool:last-of-type { border-bottom:1px solid var(--line); }
+  .tool h2 { font-size:1.05rem; margin:0 0 .15rem; color:var(--ink); }
+  .tool p { margin:0; font-size:.95rem; }
+  a.bm { flex:none; padding:.55rem .95rem; border-radius:6px; background:var(--accent); color:var(--accent-ink); text-decoration:none; font:600 .95rem system-ui,sans-serif; cursor:grab; }
+  a.bm:focus-visible { outline:3px solid var(--ink); outline-offset:2px; }
+  .note { margin-top:2rem; font-size:.9rem; }
+  @media (max-width:520px) { .tool { flex-direction:column; align-items:flex-start; } }
+</style>
+</head>
+<body>
+<main>
+  <h1>Auto-next for Facebook and Instagram albums</h1>
+  <p>Drag a button to your bookmarks bar. Open an album, click the bookmark, and it advances on its own. Click it again to stop.</p>
+
+  <div class="tool">
+    <div><h2>Facebook auto-next</h2><p>Clicks Next photo every 15 seconds.</p></div>
+    <a class="bm" href="javascript:(()=&gt;{if(window.__fbNext){clearInterval(window.__fbNext);window.__fbNext=null;return}window.__fbNext=setInterval(()=&gt;{if(document.hidden)return;const e=document.querySelectorAll(&#x27;[aria-label=&quot;Next photo&quot;]&#x27;);(e.length&gt;1?e[1]:e[0])?.click()},15000)})()">FB Auto-next</a>
+  </div>
+  <div class="tool">
+    <div><h2>Instagram auto-next</h2><p>Clicks next every 10 seconds.</p></div>
+    <a class="bm" href="javascript:(()=&gt;{if(window.__igNext){clearInterval(window.__igNext);window.__igNext=null;return}window.__igNext=setInterval(()=&gt;{if(document.hidden)return;const e=document.querySelectorAll(&#x27;body &gt; div.x1n2onr6.xzkaem6 &gt; div.x9f619.x1n2onr6.x1ja2u2z &gt; div &gt; div.x1uvtmcs.x4k7w5x.x1h91t0o.x1beo9mf.xaigb6o.x12ejxvf.x3igimt.xarpa2k.xedcshv.x1lytzrv.x1t2pt76.x7ja8zs.x1n2onr6.x1qrby5j.x1jfb8zj &gt; div &gt; div &gt; div &gt; div &gt; div:nth-child(1) &gt; div &gt; div &gt; div._aaqg._aaqh &gt; button&#x27;);(e.length&gt;1?e[1]:e[0])?.click()},10000)})()">IG Auto-next</a>
+  </div>
+  <div class="tool">
+    <div><h2>Instagram save</h2><p>Removes the overlay that blocks right-click, so you can save images for personal use.</p></div>
+    <a class="bm" href="javascript:(()=&gt;{const s=document.createElement(&#x27;style&#x27;);s.innerHTML=&#x27;._aagu &gt; *:not(._aagv){ display: none !important; }&#x27;;document.head.appendChild(s)})()">IG Save</a>
+  </div>
+
+  <p class="note">Both sites change their markup often. If a bookmarklet stops working, open an issue on GitHub. For personal use only; respect creators' rights and each platform's terms.</p>
+</main>
+</body>
+</html>
