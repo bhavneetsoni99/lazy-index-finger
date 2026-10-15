@@ -9,6 +9,8 @@ Three small bookmarklets for Facebook and Instagram. No extension, no install, n
 | `fb-autonext.js` | Clicks Next photo on Facebook every 15s |
 | `ig-autonext.js` | Clicks next on Instagram every 10s |
 | `ig-enable-save.js` | Removes the overlay that blocks right-click on Instagram images |
+| `rh-title-ticker.js` | Updates RobinHood title to display portfolio value |
+
 
 ## Install
 
